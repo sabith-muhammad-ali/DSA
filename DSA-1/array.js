@@ -34,6 +34,26 @@ for (let i = 0; i < arr.length; i++) {
     }
 }
 console.log("output:", arr);
+
+// another way
+let target1 = 6;
+let arr1 = [1,6,3,2,5,6,9,7,8,6];
+for(let i = 0; i < arr1.length; i++) {
+    if(arr1[i] === target1){
+        for(let j = arr1.length-1; j > i; j--){
+            if(arr1[j] != target1) {
+                let temp = arr1[i]
+                arr1[i] = arr1[j]
+                arr1[j] = temp
+                break;
+            }else {
+                continue;
+            }
+        }
+    }
+}
+
+console.log("output:",arr1);
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
