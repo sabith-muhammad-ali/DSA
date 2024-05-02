@@ -21,6 +21,19 @@ var twoSum = function (nums, target) {
     }
   }
 };
-// Time = O(n^2);
-// space = o(1);
 // xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+// if the number I'm targeting is 6, and I have the array [1, 2, 6, 8, 45, 7, 6, 12, 6, 76, 43, 6],
+// I want all the 6s to be moved to the end of the array while maintaining the order of other elements.
+let target = 6;
+let arr = [1, 2, 6, 8, 45, 7, 6, 12, 6, 76, 43, 6];
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+        arr.splice(i, 1); 
+        arr.push(target); 
+    }
+}
+console.log("output:", arr);
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
